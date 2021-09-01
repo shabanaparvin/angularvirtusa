@@ -5,5 +5,17 @@ for any pop up :
 in ts file:
 @HostListener('document:keydown',['$event']
 handleTabKeyWinModal(event:any){
-this.sharedService.handleTabKeyWinModal(event,'#download_message_modal',this.elementRef.nativeElement,'button,input,a,select,textarea,[tabindex]:not([tabindex="-1"])')
+this.sharedService.handleTabKeyWinModal(event,'#download_message_modal',this.elementRef.nativeElement,'button,input,a,select,textarea,[tabindex]:not([tabindex="-1"])');
+if(event.keyCode === 13)
+{
+event.preventDefault();
+return false
+}
+}
+in sharedService
+handleTabKeyWinModal(e,modalId:stringnativeElement,tagsList:string){
+if(e.keyCode === 9){
+let focusable = [];
+
+}
 }
