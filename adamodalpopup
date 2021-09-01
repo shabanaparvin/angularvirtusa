@@ -1,0 +1,9 @@
+HTML:
+for any pop up :
+<div class="download_message" id="download_message_modal" #download_message_modal">
+</div>
+in ts file:
+@HostListener('document:keydown',['$event']
+handleTabKeyWinModal(event:any){
+this.sharedService.handleTabKeyWinModal(event,'#download_message_modal',this.elementRef.nativeElement,'button,input,a,select,textarea,[tabindex]:not([tabindex="-1"])')
+}
