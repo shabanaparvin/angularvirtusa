@@ -9,13 +9,27 @@ this.sharedService.handleTabKeyWinModal(event,'#download_message_modal',this.ele
 if(event.keyCode === 13)
 {
 event.preventDefault();
-return false
+return false;
 }
 }
 in sharedService
-handleTabKeyWinModal(e,modalId:stringnativeElement,tagsList:string){
+handleTabKeyWinModal(e,modalId:string,nativeElement,tagsList:string){
 if(e.keyCode === 9){
 let focusable = [];
+nativeElement.querySelector(modalId).querySelectorAll(tagsList).forEach(el=>{
+if(!el.hasAttribute('disabled')){
+focusable.push(el);
+}
+});
+if(focusable.length){
+const first = focusable[0];
+const last =focusable[focusable.length-1];
+const shift = e.shiftKey;
+if(shift){
+if(e.taget == first){
+}
+}
 
+}
 }
 }
