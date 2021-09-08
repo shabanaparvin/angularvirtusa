@@ -1,0 +1,8 @@
+this.router.events.subscribe((event) =>{
+if(event.instanceof NavigationEnd){
+//trick the router into believing its last link wasnt previously loaded
+this.router.navigated = false;
+//need to scroll to top
+window.scrollTo(0,0);
+}
+});
