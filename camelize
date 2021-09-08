@@ -1,0 +1,17 @@
+camelize(str){
+if(!!str){
+let stat = str.toLowerCase();
+return stat.charAt(0).toUpperCase() + stat.slice(1);
+}else{
+return '';
+}
+}
+
+camelizeWithSpace(str){
+if(!!str){
+let stat = str.replace(/_/g,' ').toLowerCase();
+return stat.charAt(0).toUpperCase()+stat.slice(1);
+}else{
+return '';
+}
+}
