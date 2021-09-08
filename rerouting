@@ -1,8 +1,12 @@
 this.router.events.subscribe((event) =>{
 if(event.instanceof NavigationEnd){
 //trick the router into believing its last link wasnt previously loaded
+//re intialize the component
 this.router.navigated = false;
 //need to scroll to top
 window.scrollTo(0,0);
+this.router.routeReuseStrategy.shouldReuseRoute = function () {
+return false
+};
 }
 });
