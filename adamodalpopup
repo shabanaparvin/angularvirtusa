@@ -27,7 +27,15 @@ const last =focusable[focusable.length-1];
 const shift = e.shiftKey;
 if(shift){
 if(e.taget == first){
+last.focus();
+e.preventDefault();
 }
+}else{
+if(e.taget == last){
+first.focus();
+e.preventDefault();
+}
+
 }
 
 }
